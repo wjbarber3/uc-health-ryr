@@ -19,8 +19,14 @@
             $(this.close).click(this.removeList.bind(this));
         },
         controlAccordion: function(e) {
-            var target = $(e.target);
-            target.siblings(this.content).slideToggle();
+            var target = $(e.target),
+                targetSibs = target.siblings(this.content);
+            $(this.content).slideUp();
+            if ( !targetSibs.hasClass("active") ) {
+                targetSibs.slideDown().addClass("active");
+            } else {
+                $(this.content).removeClass("active");
+            }
             $(this.content).removeClass("off");
             $(this.listContainer).removeClass("active").empty();
             $(this.close).hide();

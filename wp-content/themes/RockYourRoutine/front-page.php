@@ -10,7 +10,6 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <?php wp_head(); ?>
     </head>
@@ -33,7 +32,7 @@
             <div class="accordion">
                 <h2>Find Your Routine</h2>
                 <?php if( have_rows('routines') ): ?>
-                    <div class="accordion-content">
+                    <div id="routine-accordion" class="accordion-content">
                         <?php while ( have_rows('routines') ): the_row(); ?>
                             <div class="col-lg-3 accordion-item">
                                 <h3><?php the_sub_field('routine_title'); ?></h3>
@@ -57,6 +56,7 @@
                     <div class="close-details"><i class="fa fa-arrow-circle-left"></i>Back To Grid</div>
                     <div id="appended-list"></div>
                 </div>
+                <div class="clearfix"></div>
             </div>
             
             <?php if( get_field('show_form') ): ?>

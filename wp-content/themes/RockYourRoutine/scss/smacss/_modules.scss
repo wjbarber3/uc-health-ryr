@@ -18,7 +18,7 @@ header{position:relative;z-index:10;width:100%;height:auto;transition:all .5s ea
 	}
 	p a{text-decoration:underline;}
 	.accordion-content{display:none;padding:50px 0;max-width:80%;margin:0 auto;transition: transform .5s;
-		&.off{@include transform(translateX(-110%));}
+		&.off{@include transform(translateX(-110%));min-height:700px;}
 	}
 	.accordion-item{text-align:center;margin-bottom:30px;cursor:pointer;
 		h3{text-transform:uppercase;margin-bottom:10px;pointer-events:none;}

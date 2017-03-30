@@ -1,0 +1,32 @@
+/* ================== */
+/* === BASE ========= */
+/* ================== */
+
+@include bp(mobile) {
+	header{padding:60px 0;
+		p{max-width:90%;margin:0 auto;}
+	}
+	footer ul{float:none;}
+}
+
+/* ================== */
+/* === ACCORDION ==== */
+/* ================== */
+
+.accordion{
+	@include bp(mobile) {
+		h2{font-size:22px;line-height:22px;}
+		.list-container{max-width:80%;top:100px;}
+		.accordion-content{max-width:90%;}
+	}
+}
+
+/* ================== */
+/* === FORM ==== */
+/* ================== */
+
+#sweepstakes-form {
+	@include bp(mobile) {
+		.gform_wrapper .top_label .gfield_error{width:100%;}
+	}
+}
